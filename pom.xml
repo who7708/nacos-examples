@@ -27,6 +27,8 @@
         <spring-cloud-openfeign.version>3.1.3</spring-cloud-openfeign.version>
         <spring-cloud-alibaba.version>2.2.8.RELEASE</spring-cloud-alibaba.version>
         <nacos-spring-boot.version>0.2.12</nacos-spring-boot.version>
+
+        <dubbo.version>3.0.10</dubbo.version>
     </properties>
 
     <modules>
@@ -34,7 +36,7 @@
         <!--<module>nacos-spring-example</module>-->
         <module>nacos-spring-boot-example</module>
         <module>nacos-spring-cloud-example</module>
-        <!--<module>nacos-dubbo-example</module>-->
+        <module>nacos-dubbo-example</module>
         <module>nacos-sentinel-example</module>
         <!--<module>nacos-cmdb-plugin-example</module>-->
         <!--<module>nacos-health-plugin-example</module>-->
@@ -74,7 +76,6 @@
             <!--    <scope>import</scope>-->
             <!--</dependency>-->
 
-
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -83,36 +84,38 @@
                 <scope>import</scope>
             </dependency>
 
+            <!--<dependency>-->
+            <!--    <groupId>com.alibaba.boot</groupId>-->
+            <!--    <artifactId>nacos-spring-boot-parent</artifactId>-->
+            <!--    <version>${nacos-spring-boot.version}</version>-->
+            <!--    <type>pom</type>-->
+            <!--    <scope>import</scope>-->
+            <!--</dependency>-->
+
             <dependency>
                 <groupId>com.alibaba.boot</groupId>
-                <artifactId>nacos-spring-boot-parent</artifactId>
-                <version>0.2.12</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <artifactId>nacos-config-spring-boot-starter</artifactId>
+                <version>${nacos-spring-boot.version}</version>
             </dependency>
 
-            <!--<dependency>-->
-            <!--    <groupId>com.alibaba.boot</groupId>-->
-            <!--    <artifactId>nacos-config-spring-boot-starter</artifactId>-->
-            <!--    <version>${nacos-spring-boot.version}</version>-->
-            <!--    &lt;!&ndash;<exclusions>&ndash;&gt;-->
-            <!--    &lt;!&ndash;    <exclusion>&ndash;&gt;-->
-            <!--    &lt;!&ndash;        <artifactId>nacos-spring-context</artifactId>&ndash;&gt;-->
-            <!--    &lt;!&ndash;        <groupId>com.alibaba.nacos</groupId>&ndash;&gt;-->
-            <!--    &lt;!&ndash;    </exclusion>&ndash;&gt;-->
-            <!--    &lt;!&ndash;</exclusions>&ndash;&gt;-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-            <!--    <groupId>com.alibaba.boot</groupId>-->
-            <!--    <artifactId>nacos-config-spring-boot-actuator</artifactId>-->
-            <!--    <version>${nacos-spring-boot.version}</version>-->
-            <!--</dependency>-->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+                <version>${nacos-spring-boot.version}</version>
+            </dependency>
 
-            <!--<dependency>-->
-            <!--    <groupId>com.alibaba.boot</groupId>-->
-            <!--    <artifactId>nacos-discovery-spring-boot-starter</artifactId>-->
-            <!--    <version>${nacos-spring-boot.version}</version>-->
-            <!--</dependency>-->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-config-spring-boot-actuator</artifactId>
+                <version>${nacos-spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                <version>2.2.10.RELEASE</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

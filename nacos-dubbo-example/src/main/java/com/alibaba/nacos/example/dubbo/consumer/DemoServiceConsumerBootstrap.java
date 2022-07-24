@@ -4,6 +4,7 @@ package com.alibaba.nacos.example.dubbo.consumer;
 import com.alibaba.nacos.example.dubbo.service.DemoService;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.dubbo.rpc.RpcContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.PropertySource;
 import javax.annotation.PostConstruct;
