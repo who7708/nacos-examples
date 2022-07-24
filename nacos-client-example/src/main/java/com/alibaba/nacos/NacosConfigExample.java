@@ -5,11 +5,10 @@ import com.alibaba.nacos.api.PropertyKeyConst;
 import com.alibaba.nacos.api.config.ConfigService;
 import com.alibaba.nacos.api.exception.NacosException;
 import com.alibaba.nacos.client.config.listener.impl.PropertiesListener;
-import java.util.Properties;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Properties;
 
 public class NacosConfigExample {
     private static final Logger LOGGER = LoggerFactory.getLogger(NacosConfigExample.class);
@@ -19,11 +18,11 @@ public class NacosConfigExample {
         // 指定 Nacos 地址
         properties.put(PropertyKeyConst.SERVER_ADDR, "127.0.0.1:8848");
         // 默认命名空间是空，可以不填写
-//        properties.put(PropertyKeyConst.NAMESPACE, "${namespace}");
+        // properties.put(PropertyKeyConst.NAMESPACE, "${namespace}");
         // 如果在云上开启鉴权可以传入应用身份
         // properties.put("ramRoleName", "$ramRoleName");
-//        properties.put(PropertyKeyConst.ACCESS_KEY, "${accessKey}");
-//        properties.put(PropertyKeyConst.SECRET_KEY, "${secretKey}");
+        // properties.put(PropertyKeyConst.ACCESS_KEY, "${accessKey}");
+        // properties.put(PropertyKeyConst.SECRET_KEY, "${secretKey}");
 
         ConfigService configService = NacosFactory.createConfigService(properties);
 

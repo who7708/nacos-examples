@@ -29,7 +29,7 @@
     </properties>
 
     <modules>
-        <!--<module>nacos-client-example</module>-->
+        <module>nacos-client-example</module>
         <!--<module>nacos-spring-example</module>-->
         <module>nacos-spring-boot-example</module>
         <module>nacos-spring-cloud-example</module>
