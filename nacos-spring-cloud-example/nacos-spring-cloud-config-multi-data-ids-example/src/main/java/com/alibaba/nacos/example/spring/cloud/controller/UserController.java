@@ -19,7 +19,7 @@ public class UserController {
     public UserController(UserService userService) {this.userService = userService;}
 
     /**
-     * http://localhost:8080/user?id=1
+     * http://localhost:8085/user?id=1
      */
     @GetMapping
     @ResponseBody
