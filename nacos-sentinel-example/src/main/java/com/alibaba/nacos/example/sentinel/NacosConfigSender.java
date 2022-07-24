@@ -37,6 +37,7 @@ public class NacosConfigSender {
             + "  }\n"
             + "]";
         ConfigService configService = NacosFactory.createConfigService(remoteAddress);
-        System.out.println(configService.publishConfig(dataId, groupId, rule));
+        final boolean result = configService.publishConfig(dataId, groupId, rule);
+        System.out.println(result);
     }
 }
