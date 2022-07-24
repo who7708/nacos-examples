@@ -20,7 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // dataId 与 nacos 保持一致
 // type 配置类型，yaml、properties
 // autoRefreshed 自动刷新配置
-@NacosPropertySource(dataId = "example", type = ConfigType.PROPERTIES, autoRefreshed = true)
+@NacosPropertySource(dataId = "example.properties", type = ConfigType.PROPERTIES, autoRefreshed = true)
 public class NacosConfigApplication {
 
     public static void main(String[] args) {

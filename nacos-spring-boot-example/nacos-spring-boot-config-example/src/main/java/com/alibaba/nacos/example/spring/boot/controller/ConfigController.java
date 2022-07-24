@@ -11,9 +11,10 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @RequestMapping("config")
 public class ConfigController {
 
-    @NacosValue(value = "${useLocalCache:false}", autoRefreshed = true)
+    @NacosValue(value = "${useLocalCache}", autoRefreshed = true)
     private boolean useLocalCache;
 
+    // http://localhost:8082/config/get
     @RequestMapping(value = "/get", method = GET)
     @ResponseBody
     public boolean get() {
