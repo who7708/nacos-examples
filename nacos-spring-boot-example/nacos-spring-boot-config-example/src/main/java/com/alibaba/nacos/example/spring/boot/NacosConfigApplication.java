@@ -1,5 +1,6 @@
 package com.alibaba.nacos.example.spring.boot;
 
+import com.alibaba.nacos.api.config.ConfigType;
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +17,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 配置内容：useLocalCache=true
  */
 @SpringBootApplication
-@NacosPropertySource(dataId = "example", autoRefreshed = true)
+// dataId 与 nacos 保持一致
+// type 配置类型，yaml、properties
+// autoRefreshed 自动刷新配置
+@NacosPropertySource(dataId = "example", type = ConfigType.PROPERTIES, autoRefreshed = true)
 public class NacosConfigApplication {
 
     public static void main(String[] args) {
