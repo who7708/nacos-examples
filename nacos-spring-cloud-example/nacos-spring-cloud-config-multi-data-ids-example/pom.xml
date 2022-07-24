@@ -48,9 +48,10 @@
         </dependency>
 
         <!-- nacos-config optional，需要自己添加依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>
+        <!-- 支持 spring.config.import 的方式引入 nacos 配置, 不再需要 bootstrap 容器 -->
+        <!--<dependency>-->
+        <!--    <groupId>org.springframework.cloud</groupId>-->
+        <!--    <artifactId>spring-cloud-starter-bootstrap</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
 </project>
